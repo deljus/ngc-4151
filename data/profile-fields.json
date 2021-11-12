@@ -1,0 +1,34 @@
+[
+  {
+    "id": "last-name-field",
+    "field": "lastName",
+    "label": "Фамилия:",
+    "component": "Input",
+    "type": "text",
+    "rules": []
+  },
+  {
+    "id": "name-field",
+    "field": "name",
+    "label": "Имя:",
+    "component": "Input",
+    "type": "text",
+    "rules": []
+  },
+  {
+    "id": "middle-name-field",
+    "field": "middleName",
+    "label": "Отчество:",
+    "component": "Input",
+    "type": "text",
+    "rules": []
+  },
+  {
+    "id": "date-of-birth-field",
+    "field": "dateOfBirth",
+    "label": "Дата рождения:",
+    "component": "DateInput",
+    "type": "text",
+    "rules": []
+  }
+]

@@ -1,0 +1,97 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String?
+  access_token       String?
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?
+  session_state      String?
+  oauth_token_secret String?
+  oauth_token        String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+  profile       Profile?
+  role          Int     @default(0)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Profile {
+  id          String    @id @default(cuid())
+
+  userId      String?   @unique
+  user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  lastName    String?
+  name        String?
+  middleName  String?
+  dateOfBirth DateTime?
+  dateOfDeath DateTime?
+  gender      Int       @default(0)
+  phone       String?
+  about       String?
+  avatar      String?
+  placeOfWork String?
+  address     String?
+
+  spouseId      String?
+  spouse        Profile?  @relation("Mariage", fields: [spouseId], references: [id])
+  formerSpouses Profile[] @relation("Mariage")
+
+  fatherId        String?
+  father          Profile?  @relation("FatherChild", fields: [fatherId], references: [id])
+  childFatherSide Profile[] @relation("FatherChild")
+
+  motherId        String?
+  mother          Profile?  @relation("MotherChild", fields: [motherId], references: [id])
+  childMotherSide Profile[] @relation("MotherChild")
+}
+
+model Photo {
+    id          String    @id @default(cuid())
+    name        String
+    uploadDate  DateTime  @default(now())
+}

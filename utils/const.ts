@@ -1,0 +1,37 @@
+export const FETCH_ONCE = {
+  retry: false,
+  refetchOnMount: false,
+  refetchOnWindowFocus: false,
+} as const
+
+export const DATE_FORMAT = "dd/mm/yyyy"
+
+export const GENDER = {
+  MAN: 0,
+  WOMEN: 1,
+} as const
+
+export const QUERY_KEYS = {
+  PROFILE_QUERY: "PROFILE_QUERY",
+  PROFILE_MUTATION: "PROFILE_MUTATION",
+  PROFILES_QUERY: "PROFILES_QUERY",
+} as const
+
+export const PERMISSION = {
+  CREATE_PROFILES: 1 << 1,
+  EDIT_PROFILES: 1 << 2,
+  DELETE_PROFILES: 1 << 3,
+  BLOCK_USERS: 1 << 4,
+  DELETE_USERS: 1 << 5,
+} as const
+
+export const ROLES = {
+  USER: 0,
+  MODERATOR: PERMISSION.CREATE_PROFILES | PERMISSION.EDIT_PROFILES | PERMISSION.BLOCK_USERS,
+  ADMIN:
+    PERMISSION.CREATE_PROFILES |
+    PERMISSION.EDIT_PROFILES |
+    PERMISSION.DELETE_PROFILES |
+    PERMISSION.BLOCK_USERS |
+    PERMISSION.DELETE_USERS,
+}

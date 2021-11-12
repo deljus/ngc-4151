@@ -1,0 +1,107 @@
+[
+  {
+    "id": "theme-1",
+    "name": "\uD83C\uDF1D light",
+    "theme": "light"
+  },
+  {
+    "id": "theme-2",
+    "name": "\uD83C\uDF1A dark",
+    "theme": "dark"
+  },
+  {
+    "id": "theme-3",
+    "name": "\uD83E\uDDC1 cupcake",
+    "theme": "cupcake"
+  },
+  {
+    "id": "theme-4",
+    "name": "\uD83D\uDC1D bumblebee",
+    "theme": "bumblebee"
+  },
+  {
+    "id": "theme-5",
+    "name": "✳️ emerald",
+    "theme": "emerald"
+  },
+  {
+    "id": "theme-6",
+    "name": "\uD83C\uDFE2 corporate",
+    "theme": "corporate"
+  },
+  {
+    "id": "theme-7",
+    "name": "\uD83C\uDF03 synthwave",
+    "theme": "synthwave"
+  },
+  {
+    "id": "theme-8",
+    "name": "\uD83D\uDC74 retro",
+    "theme": "retro"
+  },
+  {
+    "id": "theme-9",
+    "name": "\uD83E\uDD16 cyberpunk",
+    "theme": "cyberpunk"
+  },
+  {
+    "id": "theme-10",
+    "name": "\uD83C\uDF38 valentine",
+    "theme": "valentine"
+  },
+  {
+    "id": "theme-11",
+    "name": "\uD83C\uDF83 halloween",
+    "theme": "halloween"
+  },
+  {
+    "id": "theme-12",
+    "name": "\uD83C\uDF37 garden",
+    "theme": "garden"
+  },
+  {
+    "id": "theme-13",
+    "name": "\uD83C\uDF32 forest",
+    "theme": "forest"
+  },
+  {
+    "id": "theme-14",
+    "name": "\uD83D\uDC1F aqua",
+    "theme": "aqua"
+  },
+  {
+    "id": "theme-15",
+    "name": "\uD83D\uDC53 lofi",
+    "theme": "lofi"
+  },
+  {
+    "id": "theme-16",
+    "name": "\uD83D\uDD8D pastel",
+    "theme": "pastel"
+  },
+  {
+    "id": "theme-17",
+    "name": "\uD83E\uDDDA\u200D♀️ fantasy",
+    "theme": "fantasy"
+  },
+  {
+    "id": "theme-18",
+    "name": "\uD83D\uDCDD wireframe",
+    "theme": "wireframe"
+  },
+  {
+    "id": "theme-19",
+    "name": "\uD83C\uDFF4 black",
+    "theme": "black"
+  },
+  {
+    "id": "theme-20",
+    "name": "\uD83D\uDC8E luxury",
+    "theme": "luxury"
+  },
+  {
+    "id": "theme-21",
+    "name": "\uD83E\uDDDB\u200D♂️ dracula",
+    "theme": "dracula"
+  }
+]
