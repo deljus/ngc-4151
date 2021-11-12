@@ -88,10 +88,27 @@ model Profile {
   motherId        String?
   mother          Profile?  @relation("MotherChild", fields: [motherId], references: [id])
   childMotherSide Profile[] @relation("MotherChild")
+
+  photos    Photo[]
 }
 
 model Photo {
     id          String    @id @default(cuid())
     name        String
+
+    profileId   String
+    profile     Profile   @relation(fields: [profileId], references: [id])
+
+    mark        PhotoMark[]
     uploadDate  DateTime  @default(now())
+}
+
+model PhotoMark {
+    id          String    @id @default(cuid())
+    photoId     String
+    photo       Photo   @relation(fields: [photoId], references: [id])
+    x           Float
+    y           Float
+    width       Float
+    height      Float
 }
